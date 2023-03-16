@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num_1 = prompt("请输入第一个数字：");
+      while (num_1 === "" || num_1 === null) {
+        num_1 = prompt(`第一个数字不能为空，请重输入第一个数字：`);
+      }
+      num_1 = Number(num_1);
+
+      let num_2 = prompt("请输入第二个数字：");
+      while (num_2 === "" || num_2 === null) {
+        num_2 = prompt(`第二个数字不能为空，请重输入第二个数字：`);
+      }
+      num_2 = Number(num_2);
+
+      let symbol = prompt("请输入运算符号（+ - * /）：");
+
+      let rusult;
+      while (
+        symbol === null ||
+        symbol === "" ||
+        typeof symbol === "undefined"
+      ) {
+        symbol = prompt(`${symbol}不是运算符，请输入运算符号（+ - * /）：`);
+        switch (symbol) {
+          case "+":
+            rusult = num_1 + num_2;
+            break;
+          case "-":
+            rusult = num_1 - num_2;
+            break;
+          case "*":
+            rusult = num_1 * num_2;
+            break;
+          case "/":
+            rusult = num_1 / num_2;
+            break;
+          default:
+            rusult = undefined;
+            break;
+        }
+      }
+      document.write(`${num_1} ${symbol} ${num_2} = ${rusult}`);
+    </script>
+  </body>
+</html>
