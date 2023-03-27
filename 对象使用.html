@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            'password-md5': 'sokdmfica43kncx',
+            username: 'yangweiyao',
+            age: 18,
+            gender: '男',
+            sayHi:function() {
+                document.write('hi~!')
+            }
+        }
+        user.age = 25
+        delete user.gender
+        console.log(user)
+        console.log(user['password-md5'])
+        user.sayHi()
+
+        for(let k in user) {
+            console.log(k) // 属性名
+            console.log(user[k]) // 属性值
+        }
+
+    </script>
+</body>
+</html>
